@@ -5,5 +5,9 @@ module Immutable
     def readonly?
       persisted?
     end
+
+    def self.readonly_attributes
+      attribute_names
+    end
   end
 end

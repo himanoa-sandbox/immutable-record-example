@@ -20,6 +20,6 @@ RSpec.describe ImmutableUser, type: :model do
 
   describe '#update_columns' do
     let(:user) { ImmutableUser.create(name: 'fooooobar') }
-    it { expect { user.update_columns(:name, 'DO NOT UPDATE') }.to raise_error ActiveRecord::ReadOnlyRecord }
+    it { expect { user.update_column(:name, 'DO NOT UPDATE') }.to raise_error ActiveRecord::ActiveRecordError }
   end
 end
