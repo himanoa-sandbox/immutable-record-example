@@ -1,0 +1,2 @@
+class ImmutableUser < ApplicationRecord
+end
